@@ -14,7 +14,28 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+  },
+  {
+    path: '/counter',
+    name: 'counter',
+    component: () => import(/* webpackChunkName: "counter" */ '../views/Counter.vue')
+  },
+  {
+    path: '/users',
+    name: 'users',
+    component: () => import(/* webpackChunkName: "users" */ '../views/Users.vue')
+  },
+  {
+    path: '/pokemon',
+    name: 'pokemon',
+    component: () => import('../views/SearchPokemon.vue')
+  },
+  {
+    path: '/poki/:id',
+    name: 'pokemon-id',
+    component: () => import('../views/Pokemon.vue')
+  },
+
 ]
 
 const router = createRouter({
