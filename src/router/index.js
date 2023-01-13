@@ -35,7 +35,16 @@ const routes = [
     name: 'pokemon-id',
     component: () => import('../views/Pokemon.vue')
   },
-
+  {
+    path: '/todo',
+    name: 'todo',
+    component: () => import('../views/TodoVuex.vue')
+  },
+  {
+    path: '/slots',
+    name: 'slots',
+    component: () => import('../views/CustomSlots.vue')
+  },
 ]
 
 const router = createRouter({
